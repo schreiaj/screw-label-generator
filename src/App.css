@@ -44,6 +44,28 @@
   font-weight: 300;
 }
 
+@media print {
+  .form {
+    display: none;
+  }
+
+  .display > .form {
+    display: none;
+  }
+
+  .add {
+    display: none;
+  }
+}
+
+.form {
+  display: none;
+}
+
+.display:hover > .form {
+  display: inherit;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;

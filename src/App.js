@@ -23,10 +23,28 @@ class App extends Component {
     length};
   }
 
+  cloneLastScrew = () => {
+    let screws = this.state.screws;
+    screws.push(screws[screws.length - 1]);
+    this.setState({screws});
+  }
+
+  removeScrew = (index) => {
+    return () => {
+      console.log(index);
+      let screws = this.state.screws;
+      // You should check that the index isn't < 0 normally
+      // since this function is only called from generated indices
+      screws.splice(index, 1);
+      this.setState({screws});
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        {this.state.screws.map((s) => <MachineScrew {...s} />)}
+        {this.state.screws.map((s, i) => <MachineScrew key={i} {...s} />)}
+        <div className='label add' onClick={this.cloneLastScrew}> </div>
       </div>
     );
   }
