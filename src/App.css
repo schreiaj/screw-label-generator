@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 25px;
+  display: grid;
+}
+
+.label {
+
+  border: 1px #ccc dashed;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 10px;
+  padding-top: auto;
+}
+
+.screw {
+  stroke: black;
+  stroke-width: .01mm;
+  fill: none;
+}
+
+.head {
+  stroke-width: .05mm;
+}
+
+.display {
+  width: 2in;
+  text-align: right;
+  margin-bottom: auto;
+  margin-right: 2em;
+}
+
+.display-type {
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.96em;
+  font-weight: 500;
+}
+
+.display-length {
+  font-size: 1em;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 300;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
